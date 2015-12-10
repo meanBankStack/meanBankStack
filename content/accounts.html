@@ -1,0 +1,80 @@
+<!--
+
+Purpose
+========
+Build a HTML table out of json data
+
+Exercise
+==========
+Refactor the code using Web Development best practices.
+
+Notes
+=======
+
+- You are free to use any additional libraries that may be needed to simplify your code
+- Bonus points for styling the page
+- Additional Bonus for including any missing functionality. You are free to imagine what would make sense
+if you were building this as part of an app.
+
+- Make a list of refactorings that you have applied as a running list below:
+
+
+Refactorings Applied
+=====================
+- Reindent html
+- Add jQuery.dataTables library to html (media folder) to format table
+- Move JSON data to a separate file
+- Move Javascript to a separate file
+- Add express framework to handle JSON data
+- Add local server to test that JSON data is being rendered
+- Enable sorting functionality in each column with dataTables
+- Add CSS file to center text and format last row of table
+- Add bootstrap to implement navigation bar
+-->
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Table Builder</title>
+  <link rel="stylesheet" type="text/css" href="account_table.css">
+  <link rel="stylesheet" type="text/css" href="media/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">$$$.com</a>
+      </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <h1>Your Accounts</h1>
+  <table id="accountTable" class="display table-condensed" width="100%" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>Total Balance of All Accounts</th>
+        <th id="accountTotal"></th>
+        <th></th>
+      </tr>
+    </tfoot>
+  </table>
+  <script src="media/js/jquery.js"></script>
+  <script src="media/js/jquery.dataTables.js"></script>
+  <script src="media/js/dataTables.bootstrap.js"></script>
+  <script src="account.js"></script>
+</body>
+</html>
+
